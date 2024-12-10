@@ -1,17 +1,20 @@
 import React from 'react';
 import Container from './Container';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 
 import { Button } from 'primereact/button';
 import { decrement, increment } from '../feature/counterSlice';
+import { useAppDispatch, useAppSelector } from '../hooks';
 
 export default function Counter() {
   // Retrive count value from central store
-  const { value } = useSelector((state: RootState) => state.counter);
+  // const { value } = useSelector((state: RootState) => state.counter);
+  const { value } = useAppSelector((state) => state.counter);
 
   // Dispatch action and update the value of the central store
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <Container>

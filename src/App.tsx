@@ -5,12 +5,14 @@ import 'primeflex/primeflex.css'; // flex
 import { useState } from 'react';
 import Welcome from './components/Welcome';
 import Counter from './components/Counter';
+import Lorem from './components/Lorem';
 
 function App() {
   return (
     <>
       <Welcome />
       <Counter />
+      <Lorem />
     </>
   );
 }

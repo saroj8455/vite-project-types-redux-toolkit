@@ -23,7 +23,7 @@ export default function Counter() {
         <p className='font-medium text-2xl text-teal-500'>
           Counter Value : {value}
         </p>
-        <div className='card flex gap-1 mt-2'>
+        <div className='card flex gap-4 mt-2'>
           <Button label='Increment' onClick={() => dispatch(increment())} />
           <Button
             label='Decrement'

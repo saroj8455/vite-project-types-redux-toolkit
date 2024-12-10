@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterSlice from '../feature/counterSlice';
+import loremSlice from '../feature/loremSlice';
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
+    lorem: loremSlice.reducer,
   },
 });
 
@@ -11,3 +13,5 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
+
+export default store;
